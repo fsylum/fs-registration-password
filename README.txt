@@ -1,6 +1,6 @@
 === FS Registration Password ===
 Contributors: fsylum
-Tags: TODO
+Tags: user, registration, password, register
 Requires at least: 4.0
 Tested up to: 5.7
 Stable tag: 1.0.0
