@@ -1,0 +1,16 @@
+{
+    "name": "fsylum/fs-registration-password",
+    "description": "Allow users to set their own password during site registration",
+    "authors": [
+        {
+            "name": "Firdaus Zahari",
+            "homepage": "https://fsylum.net"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Fsylum\\RegistrationPassword\\": "src/"
+        }
+    },
+    "require": {}
+}
