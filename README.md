@@ -1,6 +1,6 @@
 # FS Registration Password #
 
-This plugin allows users to set their own password during the registration process. Once activated, a password field will appears on the registration field which uses the same functionality as the password field you get when you're resetting your password.
+This plugin allows users to set their passwords during the registration process. Once activated, a password field will appear on the registration field which uses the same functionality as the password field you get when you're resetting your password.
 
 The email notification sent to the new user is also modified to indicate a successful password set.
 
