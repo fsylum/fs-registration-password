@@ -10,10 +10,6 @@ jobs:
     steps:
     - uses: actions/checkout@master
     - uses: php-actions/composer@v6
-    - name: Build
-      run: |
-        npm install
-        npx mix --production
     - name: WordPress Plugin Deploy
       uses: 10up/action-wordpress-plugin-deploy@stable
       env:
