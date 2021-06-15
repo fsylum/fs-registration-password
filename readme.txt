@@ -23,6 +23,10 @@ This section describes how to install the plugin and get it working.
 1. Upload the plugin files to the `/wp-content/plugins/fs-registration-password` directory, or install the plugin through the WordPress plugins screen directly.
 2. Activate the plugin through the 'Plugins' screen in WordPress.
 
+== Screenshots ==
+
+1. Password field is shown during the registration process
+
 == Changelog ==
 
 **1.0.0**
