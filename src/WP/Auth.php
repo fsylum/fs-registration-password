@@ -11,7 +11,7 @@ class Auth implements Runnable
         add_action('login_enqueue_scripts', [$this, 'loadUserProfileJs']);
         add_action('register_form', [$this, 'addPasswordFields']);
         add_filter('registration_errors', [$this, 'validatePassword']);
-        add_filter('random_password', [$this, 'setUserPassword']);
+        add_filter('wp_pre_insert_user_data', [$this, 'setUserPassword'], 10, 2);
         add_filter('wp_new_user_notification_email', [$this, 'modifyEmailNotification'], 10, 2);
     }
 
@@ -64,17 +64,35 @@ class Auth implements Runnable
         return $errors;
     }
 
-    public function setUserPassword($password)
+    public function setUserPassword($data, $update)
     {
+        if ($update) {
+            return $data;
+        }
+
+        if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
+            return $data;
+        }
+
+        if ( !isset($_POST['wp-submit'])) {
+            return $data;
+        }
+
+        if ($_POST['wp-submit'] !== 'Register') {
+            return $data;
+        }
+
         if (!isset($_POST['fs_is_password_for_registration']) ) {
-            return $password;
+            return $data;
         }
 
         if (sanitize_text_field($_POST['fs_is_password_for_registration']) !== 'yes') {
-            return $password;
+            return $data;
         }
 
-        return $_POST['pass1'];
+        $data['user_pass'] = wp_hash_password( $_POST['pass1'] );
+
+        return $data;
     }
 
     public function modifyEmailNotification($wp_new_user_notification_email, $user)
