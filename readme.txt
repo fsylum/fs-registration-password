@@ -3,7 +3,7 @@ Contributors: fsylum
 Tags: user, registration, password, register
 Requires at least: 5.9
 Tested up to: 6.9
-Stable tag: 1.0.1
+Stable tag: 2.0.0
 Requires PHP: 8.2
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
@@ -29,11 +29,18 @@ This section describes how to install the plugin and get it working.
 
 == Changelog ==
 
+**2.0.0**
+
+* [CHANGED] Major refactoring to the plugin structure to simplify the flow.
+* [FIXED] Enhanced the security check before setting the user password during registration.
+* [FIXED] Various issues reported via plugin-check .
+* [FIXED] Compatibility up to WordPress 6.9.
+
 **1.0.1**
 
-* [FIXED] Simplify composer.json and package.json (unrelated to actual plugin)
-* [FIXED] Compatibility with WordPress 5.8
+* [FIXED] Simplify composer.json and package.json (unrelated to actual plugin).
+* [FIXED] Compatibility with WordPress 5.8.
 
 **1.0.0**
 
-* Initial release
+* Initial release.
