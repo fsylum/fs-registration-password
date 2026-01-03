@@ -3,7 +3,7 @@ Contributors: fsylum
 Tags: user, registration, password, register
 Requires at least: 5.9
 Tested up to: 6.9
-Stable tag: 2.0.0
+Stable tag: 2.0.1
 Requires PHP: 8.2
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
@@ -28,6 +28,11 @@ This section describes how to install the plugin and get it working.
 1. Password field is shown during the registration process
 
 == Changelog ==
+
+**2.0.1**
+
+* [CHANGED] Remove unused PHP constants.
+* [FIXED] Fixed deployment workflow (unrelated to actual plugin)
 
 **2.0.0**
 
