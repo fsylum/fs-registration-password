@@ -90,6 +90,14 @@ class Auth implements Runnable
             return $data;
         }
 
+        if ($_POST['user_login'] !== $data['user_login']) {
+            return $data;
+        }
+
+        if ($_POST['user_email'] !== $data['user_email']) {
+            return $data;
+        }
+
         $data['user_pass'] = wp_hash_password( $_POST['pass1'] );
 
         return $data;
